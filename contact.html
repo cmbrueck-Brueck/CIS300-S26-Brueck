@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Modern Bookshelf :: Contact</title>
+    <link rel="stylesheet" href="modern-bookshelf.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1><a href="index.html">The Modern Bookshelf</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nonfiction.html">Non-Fiction</a></li>
+            <li><a href="fantasy.html">Fantasy</a></li>
+            <li><a href="romance.html">Romance</a></li>
+            <li><a href="mystery.html">Mystery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Get in Touch</h2>
+        <p>Have a question or a book recommendation? Fill out the form below to connect!</p>
+        <p><em>Required fields are marked with an asterisk *</em></p>
+        
+        <form method="post" action="submit.html">
+            <label for="myName">*Name:</label>
+            <input type="text" name="myName" id="myName" required>
+
+            <label for="myEmail">*E-mail:</label>
+            <input type="email" name="myEmail" id="myEmail" required>
+
+            <label for="favGenre">Favorite Genre:</label>
+            <select name="favGenre" id="favGenre">
+                <option value="nonfiction">Non-Fiction</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="romance">Romance</option>
+                <option value="mystery">Mystery</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="myComments">*Your Book Recommendation / Feedback:</label>
+            <textarea name="myComments" id="myComments" rows="4" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </main>
+    <footer>
+        Copyright &copy; 2026 The Modern Bookshelf<br>
+        <a href="mailto:cassandra@brueck.com">cassandra@brueck.com</a>
+    </footer>
+</div>
+</body>
+</html>
