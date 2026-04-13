@@ -6,11 +6,13 @@ body {
     padding: 0;
     line-height: 1.6;
 }
+
 h1, h2, h3, h4, h5, h6, th, nav, footer {
     color: #5470A2;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
 }
+
 header {
     background-color: #FFFFFF;
     padding: 20px 5%; 
@@ -18,40 +20,58 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
 .header-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Creates the 3 invisible columns */
     align-items: center;
     width: 100%;
-    position: relative;
-    justify-content: center; 
 }
+
 .logo {
-    position: absolute;
-    left: 0;
-    height: 100px; 
+    height: clamp(60px, 8vw, 100px); /* Smoothly scales the logo! */
     width: auto;
+    justify-self: start; /* Keeps the logo aligned to the left side of its column */
 }
+
 header h1 {
     color: #5470A2; 
-    font-size: 2.8em;
+    font-size: clamp(1.5em, 4vw, 2.8em); /* Smoothly scales the text! */
     letter-spacing: 1px;
-    margin: 10px 0;
+    margin: 0;
     text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap; /* Prevents the title from breaking onto two lines */
 }
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
 nav {
     margin-top: 10px;
     margin-bottom: 20px; 
+    max-width: 100%;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 nav li {
     display: inline;
-    margin: 0 20px;
+    margin: 5px 20px;
 }
+
 nav a {
     text-decoration: none;
     color: #4A4A4A;
@@ -74,6 +94,71 @@ nav a:hover {
     display: block; 
     border-top: 2px solid #BFC7D1;
     border-bottom: 2px solid #BFC7D1;
+}
+
+.hero-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.hero-text {
+    flex: 1; 
+    min-width: 300px;
+}
+
+.hero-media {
+    flex: 1; 
+    min-width: 300px; 
+    text-align: center;
+}
+
+.hero-video {
+    width: 100%; 
+    max-width: 500px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Custom Lists */
+.intro-text {
+    margin-bottom: 30px;
+}
+
+.custom-list {
+    list-style: none; 
+    padding: 0; 
+    line-height: 1.8;
+}
+
+.custom-bullet {
+    color: #BFC7D1; 
+    margin-right: 8px; 
+    font-size: 1.2em;
+}
+
+/* Responsive YouTube iframe Wrapper */
+.video-wrapper {
+    text-align: center; 
+    position: relative; 
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-top: 20px; 
+    margin-bottom: 40px;
+}
+
+.video-wrapper iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: none;
 }
 
 main {
@@ -99,7 +184,7 @@ main {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
 }
 
-.column h4 {
+.column h3 {
     font-size: 1.8em;
     text-align: center; 
     margin-top: 0;
@@ -236,7 +321,6 @@ footer a:hover {
     width: 100%;
 }
 
-/* --- Buy Button Styling --- */
 .buy-btn {
     display: inline-block;
     background-color: #5470A2;
@@ -256,4 +340,145 @@ footer a:hover {
 .buy-btn:hover {
     background-color: #BFA6C9; 
     transform: scale(1.05);
+}
+
+.contact-section {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 40px 20px;
+    text-align: center; 
+}
+
+.contact-form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 40px;
+    text-align: left; /* Aligns the labels back to the left */
+}
+
+.contact-form label {
+    font-weight: bold; 
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Grouping these inputs together saves you from writing repetitive code! */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px; 
+    font-family: 'Nunito', sans-serif; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px;
+}
+
+.contact-form select {
+    background-color: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-btn {
+    border: none; 
+    cursor: pointer; 
+    font-family: 'Nunito', sans-serif; 
+    font-size: 18px; 
+    margin-top: 20px; 
+    align-self: center; 
+    padding: 15px 40px;
+}
+
+hr.section-divider {
+    border: 1px solid #BFC7D1;
+    margin: 40px 0;
+}
+
+@media (max-width: 900px) {
+    
+    /* Add relative positioning to the header so the floating menu stays contained inside it */
+    header {
+        padding: 20px 5%; 
+        position: relative; 
+    }
+
+    /* Shrink the banner image */
+    .banner-image {
+        height: 200px;
+    }
+
+    /* Float the Menu Button in the top right corner */
+    .mobile-menu-btn {
+        display: inline-block;
+        position: absolute;
+        top: 20px; 
+        right: 5%;
+        background-color: #5470A2;
+        color: #FFFFFF;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        letter-spacing: 1px;
+        font-size: 0.85em;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Float the navigation menu OVER the content */
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute; /* This stops it from pushing the page down! */
+        top: 65px; /* Places it just below the button */
+        right: 5%; /* Anchors it to the right side */
+        width: 200px; /* Gives the dropdown a clean, fixed size */
+        background-color: #FFFFFF;
+        border: 1px solid #BFC7D1;
+        border-top: 4px solid #BFA6C9;
+        border-radius: 8px;
+        padding: 10px 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Adds a floating shadow */
+        z-index: 1000; /* Ensures it stays stacked on top of the banner image */
+    }
+
+    nav li {
+        display: block; 
+        margin: 0;
+    }
+
+    /* Make the links larger and easier to tap on mobile */
+    nav a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 1em;
+        text-align: left;
+        border-bottom: none; /* Removes the hover line for the dropdown */
+    }
+
+    nav a:hover {
+        background-color: #F1F4F8; /* Adds a soft highlight when tapped */
+        border-bottom: none;
+    }
+
+    /* Show the floating links when the menu is tapped */
+    .mobile-menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /* Stack the Fiction and Non-Fiction columns vertically */
+    .two-column-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Add a horizontal scroll to the table */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }

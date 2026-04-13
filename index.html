@@ -17,6 +17,8 @@
             <h1>The Modern Bookshelf</h1>
         </div>
         <nav>
+            <input type="checkbox" id="mobile-menu" class="mobile-menu-toggle">
+            <label for="mobile-menu" class="mobile-menu-btn">☰ Menu</label>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nonfiction.html">Non-Fiction</a></li>
@@ -27,51 +29,73 @@
             </ul>
         </nav>
     </header>
-    <img src="/The Modern Bookshelf/Genre Banners/modern-bookshelf-banner.jpeg" alt="The Modern Bookshelf Banner" class="banner-image">
+    <img src="/The-Modern-Bookshelf/Genre-Banners/modern-bookshelf-banner.jpeg" alt="The Modern Bookshelf Banner" class="banner-image">
     <main>
         <section>
-            <h2>Welcome to The Modern Bookshelf</h2>
-            <p>Hey there! I'm Cassandra, the creator of The Modern Bookshelf. Have you ever walked 
-                into a bookstore or scrolled through endless online lists and felt totally 
-                paralyzed by all the choices? I completely get it, and that's exactly why I built 
-                this space!</p>
-            <p>Think of this site as your stress-free guide to finding your next great read. 
-                Whether you're a teen, a young adult, or just someone looking to get back into 
-                reading, I'm here to break down the big genres and share some hand-picked 
-                recommendations. From my all-time personal favorites to the current <em>New York 
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h2>Welcome!</h2>
+                    <p>Have you ever walked into a bookstore or scrolled through endless online lists and 
+                    felt totally paralyzed by all the choices? I completely get it, and that's exactly 
+                    why I built this space!</p>
+                    <p>Think of this site as your stress-free guide to finding your next great read. 
+                    I'm here to break down the big genres and share some hand-picked 
+                    recommendations. From my all-time personal favorites to the current <em>New York 
                     Times</em> Best Sellers, I've organized everything to help you easily find 
-                    books that actually match your vibe—no overwhelm required.</p>
-        </section>
-        <section>
-            <h2>Understanding the Basics</h2>
-            <div class="two-column-container">
-                <div class="column">
-                    <h4><strong>Fiction</strong></h4>
-                    <p>Fiction refers to literature created from the imagination. These are 
-                        stories featuring made-up characters, settings, and plots. While they 
-                        can be inspired by real events or tackle real-world themes, the narrative 
-                        itself is invented by the author.</p>
-                    <p><strong>Popular Examples:</strong></p>
-                    <span class="genre-tag">Fantasy</span>
-                    <span class="genre-tag">Romance</span>
-                    <span class="genre-tag">Mystery</span>
-                    <span class="genre-tag">Sci-Fi</span>
-                    <span class="genre-tag">Thrillers</span>
+                    books that actually match your vibe.</p>
+                    <p>I believe that there is a perfect book out there for absolutely everyone; it is just 
+                    a matter of knowing where to look. Take a look around, explore the genres that catch 
+                    your eye, and hopefully, you will leave with a few new additions to your TBR pile!</p>
                 </div>
-                <div class="column">
-                    <h4><strong>Non-Fiction</strong></h4>
-                    <p>Non-fiction is grounded entirely in reality. These books are based on facts, 
-                        actual events, and real people. The primary goal of a non-fiction book is 
-                        to inform, educate, or document the truth about the world around us.</p>
-                    <p><strong>Popular Examples:</strong></p>
-                    <span class="genre-tag">Biographies</span>
-                    <span class="genre-tag">History</span>
-                    <span class="genre-tag">Self-Help</span>
-                    <span class="genre-tag">Memoirs</span>
-                    <span class="genre-tag">True Crime</span>
+
+                <div class="hero-media">
+                    <video autoplay class="hero-video" controls aria-label="A video of a person picking a book from a shelf">
+                        <source src="book-picking-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
+
+        <section>
+            <h2>Understanding the Basics</h2>
+            <p class="intro-text">If you are new to the reading community, the terminology 
+            can sometimes feel like a completely different language. To get you started on the 
+            right foot, here is a quick breakdown of the two main umbrellas that every single book 
+            falls under.</p>
+            <div class="two-column-container">
+                <div class="column">
+                    <h3><strong>Fiction</strong></h3>
+                    <p>Fiction refers to literature created from the imagination. These are 
+                    stories featuring made-up characters, settings, and plots. While they 
+                    can be inspired by real events, tackle real-world themes, or even take place 
+                    in real cities, the narrative itself is invented by the author to entertain, 
+                    thrill, or transport you.</p>
+                    <p><strong>Popular Examples:</strong></p>
+                    <ul class="custom-list">
+                        <li><span class="custom-bullet">&#9679;</span>Fantasy</li>
+                        <li><span class="custom-bullet">&#9679;</span>Romance</li>
+                        <li><span class="custom-bullet">&#9679;</span>Mystery & Thrillers</li>
+                        <li><span class="custom-bullet">&#9679;</span>Sci-Fi</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3><strong>Non-Fiction</strong></h3>
+                    <p>Non-fiction is grounded entirely in reality. These books are based on facts, 
+                    actual events, and real people. The primary goal of a non-fiction book is 
+                    to inform, educate, or document the truth about the world around us. Reading 
+                    these is a fantastic way to walk in someone else's shoes.</p>
+                    <p><strong>Popular Examples:</strong></p>
+                    <ul class="custom-list">
+                        <li><span class="custom-bullet">&#9679;</span>Biographies</li>
+                        <li><span class="custom-bullet">&#9679;</span>History</li>
+                        <li><span class="custom-bullet">&#9679;</span>Self-Help</li>
+                        <li><span class="custom-bullet">&#9679;</span>Memoirs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2>Trending Across All Genres</h2>
             <table>
@@ -102,10 +126,26 @@
                 </tr>
             </table>
         </section>
+
+        <section>
+            <h2>From Page to Screen</h2>
+            <p>One of the most exciting things about loving books is seeing them brought to life on 
+            the big screen! Because Rick Riordan's beloved series has captured a whole new 
+            generation of readers, I had to share the official trailer for the incredible Disney+ 
+            adaptation of <em>Percy Jackson and the Olympians</em>. It perfectly captures the magic, 
+            humor, and adventure of Camp Half-Blood.</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Y3gF6Duh_z0" 
+                    title="Percy Jackson and the Olympians Trailer" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
     </main>
     <footer>
         Copyright &copy; 2026 The Modern Bookshelf<br>
-        <a href="mailto:cassandra@brueck.com">cassandra@brueck.com</a>
+        <a href="contact.html">Contact Me</a>
     </footer>
 </body>
 </html>
