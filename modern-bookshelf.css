@@ -29,19 +29,19 @@ header {
 }
 
 .logo {
-    height: clamp(60px, 8vw, 100px); /* Smoothly scales the logo! */
+    height: clamp(60px, 8vw, 100px);
     width: auto;
-    justify-self: start; /* Keeps the logo aligned to the left side of its column */
+    justify-self: start; 
 }
 
 header h1 {
     color: #5470A2; 
-    font-size: clamp(1.5em, 4vw, 2.8em); /* Smoothly scales the text! */
+    font-size: clamp(1.5em, 4vw, 2.8em); 
     letter-spacing: 1px;
     margin: 0;
     text-transform: uppercase;
     text-align: center;
-    white-space: nowrap; /* Prevents the title from breaking onto two lines */
+    white-space: nowrap; 
 }
 
 .mobile-menu-toggle {
@@ -216,7 +216,7 @@ th, td {
 }
 
 th {
-    background-color: #BFA6C9;
+    background-color: #5470A2;
     color: #FFFFFF;
 }
 
@@ -239,7 +239,7 @@ footer {
 }
 
 footer a {
-    color: #BFA6C9;
+    color: #5470A2;
     text-decoration: none;
     transition: color 0.3s ease;
 }
