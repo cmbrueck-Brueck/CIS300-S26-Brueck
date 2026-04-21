@@ -122,7 +122,6 @@ nav a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Custom Lists */
 .intro-text {
     margin-bottom: 30px;
 }
@@ -134,16 +133,15 @@ nav a:hover {
 }
 
 .custom-bullet {
-    color: #BFC7D1; 
+    color: #BFA6C9; 
     margin-right: 8px; 
     font-size: 1.2em;
 }
 
-/* Responsive YouTube iframe Wrapper */
 .video-wrapper {
     text-align: center; 
     position: relative; 
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0; 
     overflow: hidden; 
     border-radius: 8px; 
@@ -229,13 +227,19 @@ tr:hover {
 }
 
 footer {
-    background-color: #FFFFFF; 
-    color: #5470A2; 
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 30px 20px;
     margin-top: 40px;
     border-top: 2px solid #BFC7D1; 
     font-weight: bold;
+    background-color: #FFFFFF; 
+    color: #5470A2;
+}
+
+footer .copyright {
+    margin: 0; 
 }
 
 footer a {
@@ -354,7 +358,7 @@ footer a:hover {
     flex-direction: column; 
     gap: 15px; 
     margin-top: 40px;
-    text-align: left; /* Aligns the labels back to the left */
+    text-align: left; 
 }
 
 .contact-form label {
@@ -362,7 +366,6 @@ footer a:hover {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Grouping these inputs together saves you from writing repetitive code! */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -397,19 +400,15 @@ hr.section-divider {
 }
 
 @media (max-width: 900px) {
-    
-    /* Add relative positioning to the header so the floating menu stays contained inside it */
     header {
         padding: 20px 5%; 
         position: relative; 
     }
 
-    /* Shrink the banner image */
     .banner-image {
         height: 200px;
     }
 
-    /* Float the Menu Button in the top right corner */
     .mobile-menu-btn {
         display: inline-block;
         position: absolute;
@@ -428,21 +427,20 @@ hr.section-divider {
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    /* Float the navigation menu OVER the content */
     nav ul {
         display: none; 
         flex-direction: column;
-        position: absolute; /* This stops it from pushing the page down! */
-        top: 65px; /* Places it just below the button */
-        right: 5%; /* Anchors it to the right side */
-        width: 200px; /* Gives the dropdown a clean, fixed size */
+        position: absolute; 
+        top: 65px; 
+        right: 5%; 
+        width: 200px; 
         background-color: #FFFFFF;
         border: 1px solid #BFC7D1;
         border-top: 4px solid #BFA6C9;
         border-radius: 8px;
         padding: 10px 0;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Adds a floating shadow */
-        z-index: 1000; /* Ensures it stays stacked on top of the banner image */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+        z-index: 1000; 
     }
 
     nav li {
@@ -450,32 +448,28 @@ hr.section-divider {
         margin: 0;
     }
 
-    /* Make the links larger and easier to tap on mobile */
     nav a {
         display: block;
         padding: 12px 20px;
         font-size: 1em;
         text-align: left;
-        border-bottom: none; /* Removes the hover line for the dropdown */
+        border-bottom: none; 
     }
 
     nav a:hover {
-        background-color: #F1F4F8; /* Adds a soft highlight when tapped */
+        background-color: #F1F4F8; 
         border-bottom: none;
     }
 
-    /* Show the floating links when the menu is tapped */
     .mobile-menu-toggle:checked ~ ul {
         display: flex;
     }
 
-    /* Stack the Fiction and Non-Fiction columns vertically */
     .two-column-container {
         flex-direction: column;
         gap: 20px;
     }
 
-    /* Add a horizontal scroll to the table */
     table {
         display: block;
         overflow-x: auto;
